@@ -8,6 +8,7 @@ class Ball(Turtle):
         self.up()
         self.x_move = 10
         self.y_move = 10
+        self.move_speed = 0.1
 
     def move(self):
         new_x = self.xcor() + self.x_move
@@ -22,10 +23,13 @@ class Ball(Turtle):
     
     def bounce_right(self):
         self.x_move *= -1
+        self.move_speed *= 0.9
 
     def bounce_left(self):
         self.x_move *= -1
+        self.move_speed *= 0.9
 
     def reset(self):
         self.home()
+        self.move_speed = 0.1
         self.move()

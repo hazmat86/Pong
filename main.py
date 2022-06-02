@@ -24,7 +24,7 @@ screen.onkeypress(paddle_a.move_up, "w")
 screen.onkeypress(paddle_a.move_down, "s")
 
 while game_is_on == True:
-    time.sleep(.1)
+    time.sleep(ball.move_speed)
     ball.move()
     screen.update()
     if ball.ycor() > 280:
